@@ -186,8 +186,11 @@ h1,h2,h3,h4{ font-family: var(--font-display); font-weight: 500; margin: 0; lett
 /* ---------- radar lot rows ---------- */
 .lot{ display:grid; grid-template-columns: 0.85fr 1.15fr; gap: var(--gutter); padding: clamp(48px,6vw,80px) 0; align-items:start; }
 .lot:not(:last-child){ border-bottom:1px solid var(--line-light); }
-.lot-highlight{ animation: lotFlash 1.8s ease; }
-@keyframes lotFlash{ 0%{ background: rgba(176,141,87,0.14); } 100%{ background: transparent; } }
+.lot-highlight{ animation: lotFlash 1.6s ease; }
+@keyframes lotFlash{
+  0%{ box-shadow: inset 4px 0 0 0 var(--brass), inset 0 0 0 1000px rgba(176,141,87,0.10); }
+  100%{ box-shadow: inset 4px 0 0 0 rgba(176,141,87,0), inset 0 0 0 1000px rgba(176,141,87,0); }
+}
 .lot-head{ display:flex; justify-content:space-between; align-items:flex-start; gap:16px; }
 .lot-id{ font-family: var(--font-mono); font-size:0.78rem; color: var(--brass); letter-spacing:0.04em; }
 .lot-title{ margin-top:10px; }

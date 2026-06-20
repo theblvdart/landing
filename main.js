@@ -211,7 +211,7 @@
       const y = el.getBoundingClientRect().top + window.scrollY - (offset || 90);
       window.scrollTo({ top: y, behavior: "smooth" });
       el.classList.add("lot-highlight");
-      setTimeout(() => el.classList.remove("lot-highlight"), 1800);
+      setTimeout(() => el.classList.remove("lot-highlight"), 1600);
     }
   }
 
