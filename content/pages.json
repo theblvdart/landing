@@ -1,17 +1,27 @@
 {
   "home": {
-    "heroEyebrow": "Contemporary Art, Collectibles, Fashion, Design",
+    "ctaButton": "Request a Search",
+    "journalSectionCta": "Visit the Journal",
+    "radarSectionHeading": "On our radar right now.",
     "heroHeadlines": [
       "Culture Worth Collecting.",
       "Beyond Hype.",
       "Discover What’s Next.",
       "Collect Better.",
-      "Where Culture Meets Collecting."
+      "Curiosity, Curated."
     ],
-    "heroSubheadline": "THE BLVD explores contemporary art, collectibles, fashion and cultural objects through insight, context and acquisition opportunities.",
     "heroPrimaryCta": "Explore The Radar",
-    "heroSecondaryCta": "Request A Search",
+    "radarSectionEyebrow": "Featured Radar",
     "whatWeDoEyebrow": "What We Do",
+    "heroEyebrow": "Contemporary Art, Collectibles, Fashion, Design",
+    "radarSectionCta": "View all entries",
+    "ctaHeading": "Looking for something specific?",
+    "ctaSubheading": "Tell us what you're after (a piece, an edition, an opportunity) and we'll see what's possible.",
+    "journalSectionHeading": "Reading on culture and collecting.",
+    "heroSecondaryCta": "Request A Search",
+    "ctaEyebrow": "Private Search",
+    "heroSubheadline": "THE BLVD explores contemporary art, collectibles, fashion and cultural objects through insight, context and acquisition opportunities.",
+    "journalSectionEyebrow": "Latest Journal",
     "whatWeDo": [
       {
         "number": "01",
@@ -28,17 +38,7 @@
         "title": "Acquire",
         "description": "Access sourcing and acquisition support across art, collectibles, fashion and luxury."
       }
-    ],
-    "radarSectionEyebrow": "Featured Radar",
-    "radarSectionHeading": "On our radar right now.",
-    "radarSectionCta": "View all entries",
-    "journalSectionEyebrow": "Latest Journal",
-    "journalSectionHeading": "Reading on culture and collecting.",
-    "journalSectionCta": "Visit the Journal",
-    "ctaEyebrow": "Private Search",
-    "ctaHeading": "Looking for something specific?",
-    "ctaSubheading": "Tell us what you're after (a piece, an edition, an opportunity) and we'll see what's possible.",
-    "ctaButton": "Request a Search"
+    ]
   },
   "radar": {
     "eyebrow": "The Radar",
