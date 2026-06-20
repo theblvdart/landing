@@ -124,7 +124,7 @@ h1,h2,h3,h4{ font-family: var(--font-display); font-weight: 500; margin: 0; lett
 
 /* ---------- hero ---------- */
 .hero{ padding-top: clamp(72px,12vw,140px); padding-bottom: clamp(56px,8vw,96px); }
-.hero-head{ min-height: 1.1em; }
+.hero-head{ min-height: 2.2em; display:flex; align-items:center; }
 .hero-actions{ display:flex; gap:16px; margin-top:40px; flex-wrap:wrap; }
 
 /* ---------- what-we-do ---------- */
