@@ -36,7 +36,7 @@ body{
 }
 img{ max-width:100%; display:block; }
 a{ color:inherit; text-decoration:none; }
-button{ font-family:inherit; cursor:pointer; }
+button{ font-family:inherit; color:inherit; cursor:pointer; }
 ::selection{ background: var(--brass); color: var(--ink); }
 
 @media (prefers-reduced-motion: reduce){
@@ -80,7 +80,8 @@ h1,h2,h3,h4{ font-family: var(--font-display); font-weight: 500; margin: 0; lett
 }
 .nav{
   position: sticky; top:0; z-index: 50;
-  background: rgba(13,12,10,0.86);
+  background: rgba(13,12,10,0.97);
+  color: var(--paper);
   backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--line-dark);
 }
@@ -275,7 +276,7 @@ textarea{ resize: vertical; min-height: 120px; }
 
 /* ---------- mobile menu ---------- */
 .mobile-menu{
-  position: fixed; inset:0; background: var(--ink); z-index: 100;
+  position: fixed; inset:0; background: var(--ink); color: var(--paper); z-index: 100;
   display:flex; flex-direction:column; padding: 28px var(--gutter);
   transform: translateY(-100%); transition: transform .3s ease;
 }
