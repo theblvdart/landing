@@ -204,11 +204,22 @@
     return new URLSearchParams(location.search).get(name);
   }
 
+  function scrollToHash(offset){
+    if(!location.hash) return;
+    const el = document.querySelector(location.hash);
+    if(el){
+      const y = el.getBoundingClientRect().top + window.scrollY - (offset || 90);
+      window.scrollTo({ top: y, behavior: "smooth" });
+      el.classList.add("lot-highlight");
+      setTimeout(() => el.classList.remove("lot-highlight"), 1800);
+    }
+  }
+
   window.BLVD = {
     loadContent,
     formatDate, statusClass, ph,
     radarCardHTML, journalCardHTML, articleRowHTML, lotHTML, articleBodyHTML,
-    triadItemHTML, serviceRowHTML, optionsHTML, setText, hydrateChrome, getQueryParam,
+    triadItemHTML, serviceRowHTML, optionsHTML, setText, hydrateChrome, getQueryParam, scrollToHash,
     initMobileMenu, markActiveNav, initHeadlineRotator, initSourceForm
   };
 
