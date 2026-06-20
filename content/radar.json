@@ -32,7 +32,7 @@
       "name": "Space Invaders",
       "slug": "invader",
       "status": "Available",
-      "image": "",
+      "image": "/assets/uploads/invader.webp",
       "category": "Art",
       "whyCollectorsCare": "The studio practice (Alias prints, Rubikcubist works, sculpture) gives collectors a way into a project otherwise defined by unsanctioned public installation, with the mapped street works adding a layer of provenance most public art never has."
     },
@@ -44,7 +44,7 @@
       "name": "Selected Drawings",
       "slug": "shrigley",
       "status": "Available",
-      "image": "",
+      "image": "/assets/uploads/shrigley.webp",
       "category": "Art",
       "whyCollectorsCare": "Prints and editions remain genuinely accessible relative to most names with comparable institutional recognition, making this one of the more approachable entry points on this list."
     },
@@ -56,7 +56,7 @@
       "name": "Performance Archive & Editions",
       "slug": "abramovic",
       "status": "Enquire",
-      "image": "",
+      "image": "/assets/uploads/marina_abramović.jpg",
       "category": "Art",
       "whyCollectorsCare": "Documentation and edition works carry the weight of one of the most influential bodies of performance art on record, appealing to collectors building toward depth and historical significance rather than decoration."
     },
@@ -68,7 +68,7 @@
       "name": "Selected Works",
       "slug": "kremer",
       "status": "Watching",
-      "image": "",
+      "image": "/assets/uploads/kremer.jpg",
       "category": "Art",
       "whyCollectorsCare": "A genuinely growing market with room to develop further, and a visual language that travels well across art, interiors and brand collaborations."
     },
@@ -80,7 +80,7 @@
       "name": "Nike x Off-White: “The Ten”",
       "slug": "off-white-the-ten",
       "status": "Sourced",
-      "image": "",
+      "image": "/assets/uploads/the-ten.webp",
       "category": "Fashion",
       "whyCollectorsCare": "As one of the defining releases of the last decade of streetwear, original pairs and deadstock examples sit at the intersection of fashion collecting and cultural object, with documentation and condition mattering enormously to value."
     }
