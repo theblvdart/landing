@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title id="page-title">Journal | THE BLVD</title>
+<meta name="description" content="Analysis, perspective and primers on culture and collecting.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,380..520&family=Archivo:wght@400;500;600&family=Roboto+Condensed:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="wrap">
+    <a href="index.html" class="nav-mark">BLVD.</a>
+    <div class="nav-links">
+      <a href="radar.html" data-nav="radar">The Radar</a>
+      <a href="journal.html" data-nav="journal">Journal</a>
+      <a href="source.html" data-nav="source">Source</a>
+      <a href="request.html" class="nav-cta" data-nav="request">Request a search</a>
+    </div>
+    <button class="nav-toggle" aria-label="Open menu">
+      <svg width="22" height="14" viewBox="0 0 22 14"><rect width="22" height="1.5" fill="currentColor"/><rect y="12.5" width="22" height="1.5" fill="currentColor"/></svg>
+    </button>
+  </div>
+</nav>
+
+<div class="mobile-menu">
+  <div class="mobile-menu-top">
+    <span class="nav-mark">BLVD.</span>
+    <button class="mobile-menu-close" aria-label="Close menu">
+      <svg width="20" height="20" viewBox="0 0 20 20"><line x1="1" y1="1" x2="19" y2="19" stroke="currentColor" stroke-width="1.5"/><line x1="19" y1="1" x2="1" y2="19" stroke="currentColor" stroke-width="1.5"/></svg>
+    </button>
+  </div>
+  <a href="radar.html" data-nav="radar">The Radar</a>
+  <a href="journal.html" data-nav="journal">Journal</a>
+  <a href="source.html" data-nav="source">Source</a>
+  <a href="request.html" data-nav="request">Request a Search</a>
+</div>
+
+<div id="article-root">
+  <header class="page-header on-dark">
+    <div class="wrap" style="max-width: 760px;">
+      <a href="journal.html" class="card-link" style="display:inline-block; margin-bottom:18px;"><span>\u2190 Journal</span></a>
+      <div class="eyebrow" id="article-category"></div>
+      <h1 class="h-display" id="article-title" style="margin-top:14px; font-size:clamp(2rem,4.4vw,3.2rem);"></h1>
+      <div class="date mono-num" id="article-date" style="color:var(--ash); margin-top:18px; display:block;"></div>
+    </div>
+  </header>
+
+  <section class="on-dark">
+    <div class="wrap" style="max-width: 760px;">
+      <div id="article-image" style="margin-bottom:40px;"></div>
+      <div id="article-body" class="lede" style="max-width:none; color:var(--paper);"></div>
+    </div>
+  </section>
+</div>
+
+<div id="not-found-root" style="display:none;">
+  <section class="section on-dark">
+    <div class="wrap" style="max-width:560px;">
+      <div class="eyebrow">Journal</div>
+      <h1 class="h-1" style="margin-top:14px;">That article isn't here anymore.</h1>
+      <p class="lede" style="margin-top:18px;">It may have been renamed or removed. Have a look at the rest of the Journal instead.</p>
+      <a href="journal.html" class="btn btn-primary" style="margin-top:30px;">Back to the Journal <span class="btn-arrow">→</span></a>
+    </div>
+  </section>
+</div>
+
+<section class="section-tight on-light cta-band">
+  <div class="wrap">
+    <div class="eyebrow on-light" id="cta-eyebrow"></div>
+    <h2 class="h-1" id="cta-heading" style="margin-top:14px; max-width:20ch;"></h2>
+    <a href="request.html" class="btn btn-primary" style="margin-top:30px;"><span id="cta-button"></span> <span class="btn-arrow">→</span></a>
+  </div>
+</section>
+
+<footer class="footer on-dark">
+  <div class="wrap">
+    <div>
+      <div class="footer-mark">BLVD.</div>
+      <div class="footer-fine">© <span id="year"></span> <span data-bind="site-name"></span>. <span data-bind="site-tagline"></span></div>
+    </div>
+    <div class="footer-links">
+      <a href="https://instagram.com/theblvd" data-footer="instagram">Instagram</a>
+      <a href="mailto:hello@theblvd.com" data-footer="email">Email</a>
+      <a href="request.html" data-footer="contact">Contact</a>
+      <a href="journal.html" data-footer="newsletter">Newsletter</a>
+    </div>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+
+  BLVD.loadContent().then(({journal, site, pages}) => {
+    BLVD.hydrateChrome(site);
+    BLVD.setText("cta-eyebrow", pages.journal.ctaEyebrow);
+    BLVD.setText("cta-heading", pages.journal.ctaHeading);
+    BLVD.setText("cta-button", pages.journal.ctaButton);
+
+    const slug = BLVD.getQueryParam("slug");
+    const article = journal.find(a => a.slug === slug);
+
+    if(!article){
+      document.getElementById("article-root").style.display = "none";
+      document.getElementById("not-found-root").style.display = "block";
+      return;
+    }
+
+    document.title = article.title + " | THE BLVD";
+    BLVD.setText("article-category", article.category);
+    BLVD.setText("article-title", article.title);
+    BLVD.setText("article-date", BLVD.formatDate(article.date));
+    document.getElementById("article-image").innerHTML = BLVD.ph(article, {cls:"wide"});
+    document.getElementById("article-body").innerHTML = BLVD.articleBodyHTML(article.body || article.excerpt);
+  });
+</script>
+</body>
+</html>

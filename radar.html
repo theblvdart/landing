@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Radar | THE BLVD</title>
+<meta name="description" content="Objects, artists and opportunities currently worth paying attention to.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,380..520&family=Archivo:wght@400;500;600&family=Roboto+Condensed:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body class="on-light" style="background:var(--paper); color:var(--ink);">
+
+<nav class="nav">
+  <div class="wrap">
+    <a href="index.html" class="nav-mark">BLVD.</a>
+    <div class="nav-links">
+      <a href="radar.html" data-nav="radar">The Radar</a>
+      <a href="journal.html" data-nav="journal">Journal</a>
+      <a href="source.html" data-nav="source">Source</a>
+      <a href="request.html" class="nav-cta" data-nav="request">Request a search</a>
+    </div>
+    <button class="nav-toggle" aria-label="Open menu">
+      <svg width="22" height="14" viewBox="0 0 22 14"><rect width="22" height="1.5" fill="currentColor"/><rect y="12.5" width="22" height="1.5" fill="currentColor"/></svg>
+    </button>
+  </div>
+</nav>
+
+<div class="mobile-menu">
+  <div class="mobile-menu-top">
+    <span class="nav-mark">BLVD.</span>
+    <button class="mobile-menu-close" aria-label="Close menu">
+      <svg width="20" height="20" viewBox="0 0 20 20"><line x1="1" y1="1" x2="19" y2="19" stroke="currentColor" stroke-width="1.5"/><line x1="19" y1="1" x2="1" y2="19" stroke="currentColor" stroke-width="1.5"/></svg>
+    </button>
+  </div>
+  <a href="radar.html" data-nav="radar">The Radar</a>
+  <a href="journal.html" data-nav="journal">Journal</a>
+  <a href="source.html" data-nav="source">Source</a>
+  <a href="request.html" data-nav="request">Request a Search</a>
+</div>
+
+<header class="page-header on-light">
+  <div class="wrap">
+    <div class="eyebrow on-light" id="page-eyebrow"></div>
+    <h1 class="h-display" id="page-heading" style="margin-top:14px; max-width:14ch;"></h1>
+    <p class="lede on-light" id="page-subheading" style="margin-top:22px;"></p>
+  </div>
+</header>
+
+<section class="on-light">
+  <div class="wrap" id="lot-list"></div>
+</section>
+
+<section class="section-tight on-light cta-band">
+  <div class="wrap">
+    <hr class="rule" style="margin-bottom:48px;">
+    <div class="eyebrow on-light" id="cta-eyebrow"></div>
+    <h2 class="h-1" id="cta-heading" style="margin-top:14px; max-width:20ch;"></h2>
+    <a href="request.html" class="btn btn-primary" style="margin-top:30px;"><span id="cta-button"></span> <span class="btn-arrow">→</span></a>
+  </div>
+</section>
+
+<footer class="footer on-dark">
+  <div class="wrap">
+    <div>
+      <div class="footer-mark">BLVD.</div>
+      <div class="footer-fine">© <span id="year"></span> <span data-bind="site-name"></span>. <span data-bind="site-tagline"></span></div>
+    </div>
+    <div class="footer-links">
+      <a href="https://instagram.com/theblvd" data-footer="instagram">Instagram</a>
+      <a href="mailto:hello@theblvd.com" data-footer="email">Email</a>
+      <a href="request.html" data-footer="contact">Contact</a>
+      <a href="journal.html" data-footer="newsletter">Newsletter</a>
+    </div>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+
+  BLVD.loadContent().then(({radar, site, pages}) => {
+    BLVD.hydrateChrome(site);
+    const p = pages.radar;
+
+    BLVD.setText("page-eyebrow", p.eyebrow);
+    BLVD.setText("page-heading", p.heading);
+    BLVD.setText("page-subheading", p.subheading);
+    BLVD.setText("cta-eyebrow", p.ctaEyebrow);
+    BLVD.setText("cta-heading", p.ctaHeading);
+    BLVD.setText("cta-button", p.ctaButton);
+
+    document.getElementById("lot-list").innerHTML = radar.map(BLVD.lotHTML).join("");
+  });
+</script>
+</body>
+</html>

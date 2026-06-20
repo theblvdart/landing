@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>THE BLVD | Culture Worth Collecting</title>
+<meta name="description" content="THE BLVD discovers, contextualises and sources exceptional opportunities across contemporary art, collectibles, fashion and design.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,380..520&family=Archivo:wght@400;500;600&family=Roboto+Condensed:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="wrap">
+    <a href="index.html" class="nav-mark">BLVD.</a>
+    <div class="nav-links">
+      <a href="radar.html" data-nav="radar">The Radar</a>
+      <a href="journal.html" data-nav="journal">Journal</a>
+      <a href="source.html" data-nav="source">Source</a>
+      <a href="request.html" class="nav-cta" data-nav="request">Request a search</a>
+    </div>
+    <button class="nav-toggle" aria-label="Open menu">
+      <svg width="22" height="14" viewBox="0 0 22 14"><rect width="22" height="1.5" fill="currentColor"/><rect y="12.5" width="22" height="1.5" fill="currentColor"/></svg>
+    </button>
+  </div>
+</nav>
+
+<div class="mobile-menu">
+  <div class="mobile-menu-top">
+    <span class="nav-mark">BLVD.</span>
+    <button class="mobile-menu-close" aria-label="Close menu">
+      <svg width="20" height="20" viewBox="0 0 20 20"><line x1="1" y1="1" x2="19" y2="19" stroke="currentColor" stroke-width="1.5"/><line x1="19" y1="1" x2="1" y2="19" stroke="currentColor" stroke-width="1.5"/></svg>
+    </button>
+  </div>
+  <a href="radar.html" data-nav="radar">The Radar</a>
+  <a href="journal.html" data-nav="journal">Journal</a>
+  <a href="source.html" data-nav="source">Source</a>
+  <a href="request.html" data-nav="request">Request a Search</a>
+</div>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="eyebrow" id="hero-eyebrow"></div>
+    <h1 class="h-display hero-head fade-in" id="hero-headline" style="margin-top:18px; transition: opacity .35s ease;"></h1>
+    <p class="lede" id="hero-subheadline" style="margin-top:26px;"></p>
+    <div class="hero-actions">
+      <a href="radar.html" class="btn btn-primary"><span id="hero-cta-primary"></span> <span class="btn-arrow">→</span></a>
+      <a href="request.html" class="btn btn-ghost"><span id="hero-cta-secondary"></span></a>
+    </div>
+  </div>
+</header>
+
+<section class="section-tight on-dark">
+  <div class="wrap">
+    <div class="eyebrow" id="whatwedo-eyebrow"></div>
+    <div class="triad" id="triad"></div>
+  </div>
+</section>
+
+<section class="section on-light">
+  <div class="wrap">
+    <div style="display:flex; justify-content:space-between; align-items:flex-end; flex-wrap:wrap; gap:16px;">
+      <div>
+        <div class="eyebrow on-light" id="radar-section-eyebrow"></div>
+        <h2 class="h-1" id="radar-section-heading" style="margin-top:10px;"></h2>
+      </div>
+      <a href="radar.html" class="btn btn-ghost hide-mobile"><span id="radar-section-cta"></span> <span class="btn-arrow">→</span></a>
+    </div>
+    <div class="grid" id="featured-radar-grid"></div>
+  </div>
+</section>
+
+<section class="section on-dark">
+  <div class="wrap">
+    <div style="display:flex; justify-content:space-between; align-items:flex-end; flex-wrap:wrap; gap:16px;">
+      <div>
+        <div class="eyebrow" id="journal-section-eyebrow"></div>
+        <h2 class="h-1" id="journal-section-heading" style="margin-top:10px;"></h2>
+      </div>
+      <a href="journal.html" class="btn btn-ghost hide-mobile"><span id="journal-section-cta"></span> <span class="btn-arrow">→</span></a>
+    </div>
+    <div class="grid" id="latest-journal-grid"></div>
+  </div>
+</section>
+
+<section class="section-tight on-light cta-band">
+  <div class="wrap">
+    <div class="eyebrow on-light" id="cta-eyebrow"></div>
+    <h2 class="h-1" id="cta-heading" style="margin-top:14px; max-width:18ch;"></h2>
+    <p class="lede on-light" id="cta-subheading" style="margin-top:18px;"></p>
+    <a href="request.html" class="btn btn-primary" style="margin-top:30px;"><span id="cta-button"></span> <span class="btn-arrow">→</span></a>
+  </div>
+</section>
+
+<footer class="footer on-dark">
+  <div class="wrap">
+    <div>
+      <div class="footer-mark">BLVD.</div>
+      <div class="footer-fine">© <span id="year"></span> <span data-bind="site-name"></span>. <span data-bind="site-tagline"></span></div>
+    </div>
+    <div class="footer-links">
+      <a href="https://instagram.com/theblvd" data-footer="instagram">Instagram</a>
+      <a href="mailto:hello@theblvd.com" data-footer="email">Email</a>
+      <a href="request.html" data-footer="contact">Contact</a>
+      <a href="journal.html" data-footer="newsletter">Newsletter</a>
+    </div>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+
+  BLVD.loadContent().then(({radar, journal, site, pages}) => {
+    BLVD.hydrateChrome(site);
+    const p = pages.home;
+
+    BLVD.setText("hero-eyebrow", p.heroEyebrow);
+    BLVD.setText("hero-subheadline", p.heroSubheadline);
+    BLVD.setText("hero-cta-primary", p.heroPrimaryCta);
+    BLVD.setText("hero-cta-secondary", p.heroSecondaryCta);
+    BLVD.setText("whatwedo-eyebrow", p.whatWeDoEyebrow);
+    BLVD.setText("radar-section-eyebrow", p.radarSectionEyebrow);
+    BLVD.setText("radar-section-heading", p.radarSectionHeading);
+    BLVD.setText("radar-section-cta", p.radarSectionCta);
+    BLVD.setText("journal-section-eyebrow", p.journalSectionEyebrow);
+    BLVD.setText("journal-section-heading", p.journalSectionHeading);
+    BLVD.setText("journal-section-cta", p.journalSectionCta);
+    BLVD.setText("cta-eyebrow", p.ctaEyebrow);
+    BLVD.setText("cta-heading", p.ctaHeading);
+    BLVD.setText("cta-subheading", p.ctaSubheading);
+    BLVD.setText("cta-button", p.ctaButton);
+
+    document.getElementById("triad").innerHTML = p.whatWeDo.map(BLVD.triadItemHTML).join("");
+
+    BLVD.initHeadlineRotator(document.getElementById("hero-headline"), p.heroHeadlines);
+
+    const radarBySlug = Object.fromEntries(radar.map(r => [r.slug, r]));
+    document.getElementById("featured-radar-grid").innerHTML =
+      site.featuredHome.map(slug => BLVD.radarCardHTML(radarBySlug[slug])).join("");
+
+    document.getElementById("latest-journal-grid").innerHTML =
+      journal.slice(0, 3).map(BLVD.journalCardHTML).join("");
+  });
+</script>
+</body>
+</html>

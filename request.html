@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Request a Search | THE BLVD</title>
+<meta name="description" content="Tell us what you're looking for and we'll see what's possible.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,380..520&family=Archivo:wght@400;500;600&family=Roboto+Condensed:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="wrap">
+    <a href="index.html" class="nav-mark">BLVD.</a>
+    <div class="nav-links">
+      <a href="radar.html" data-nav="radar">The Radar</a>
+      <a href="journal.html" data-nav="journal">Journal</a>
+      <a href="source.html" data-nav="source">Source</a>
+      <a href="request.html" class="nav-cta" data-nav="request">Request a search</a>
+    </div>
+    <button class="nav-toggle" aria-label="Open menu">
+      <svg width="22" height="14" viewBox="0 0 22 14"><rect width="22" height="1.5" fill="currentColor"/><rect y="12.5" width="22" height="1.5" fill="currentColor"/></svg>
+    </button>
+  </div>
+</nav>
+
+<div class="mobile-menu">
+  <div class="mobile-menu-top">
+    <span class="nav-mark">BLVD.</span>
+    <button class="mobile-menu-close" aria-label="Close menu">
+      <svg width="20" height="20" viewBox="0 0 20 20"><line x1="1" y1="1" x2="19" y2="19" stroke="currentColor" stroke-width="1.5"/><line x1="19" y1="1" x2="1" y2="19" stroke="currentColor" stroke-width="1.5"/></svg>
+    </button>
+  </div>
+  <a href="radar.html" data-nav="radar">The Radar</a>
+  <a href="journal.html" data-nav="journal">Journal</a>
+  <a href="source.html" data-nav="source">Source</a>
+  <a href="request.html" data-nav="request">Request a Search</a>
+</div>
+
+<header class="page-header on-dark">
+  <div class="wrap">
+    <div class="eyebrow" id="page-eyebrow"></div>
+    <h1 class="h-display" id="page-heading" style="margin-top:14px; max-width:14ch;"></h1>
+    <p class="lede" id="page-subheading" style="margin-top:22px;"></p>
+  </div>
+</header>
+
+<section class="section-tight on-dark">
+  <div class="wrap">
+    <form class="form" id="source-form">
+      <div class="form-row two">
+        <div>
+          <label for="name">Name</label>
+          <input id="name" name="name" type="text" placeholder="Your full name" required>
+        </div>
+        <div>
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" placeholder="you@email.com" required>
+        </div>
+      </div>
+
+      <div class="form-row two">
+        <div>
+          <label for="category">Category</label>
+          <select id="category" name="category" required>
+            <option value="" disabled selected>Select a category</option>
+          </select>
+        </div>
+        <div>
+          <label for="context">Sourcing for</label>
+          <select id="context" name="context" required>
+            <option value="" disabled selected>Select an option</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <label for="budget">Budget</label>
+        <input id="budget" name="budget" type="text" placeholder="Approximate range">
+      </div>
+
+      <div class="form-row">
+        <label for="description">Description</label>
+        <textarea id="description" name="description" placeholder="What are you looking for? Include any specifics: artist, edition, era, condition, timing." required></textarea>
+      </div>
+
+      <div>
+        <button type="submit" class="btn btn-primary"><span id="submit-button"></span> <span class="btn-arrow">→</span></button>
+        <p class="form-note" id="form-note"></p>
+      </div>
+
+      <div class="form-success" id="form-success"></div>
+    </form>
+  </div>
+</section>
+
+<footer class="footer on-dark">
+  <div class="wrap">
+    <div>
+      <div class="footer-mark">BLVD.</div>
+      <div class="footer-fine">© <span id="year"></span> <span data-bind="site-name"></span>. <span data-bind="site-tagline"></span></div>
+    </div>
+    <div class="footer-links">
+      <a href="https://instagram.com/theblvd" data-footer="instagram">Instagram</a>
+      <a href="mailto:hello@theblvd.com" data-footer="email">Email</a>
+      <a href="request.html" data-footer="contact">Contact</a>
+      <a href="journal.html" data-footer="newsletter">Newsletter</a>
+    </div>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+
+  BLVD.loadContent().then(({site, pages}) => {
+    BLVD.hydrateChrome(site);
+    const p = pages.request;
+
+    BLVD.setText("page-eyebrow", p.eyebrow);
+    BLVD.setText("page-heading", p.heading);
+    BLVD.setText("page-subheading", p.subheading);
+    BLVD.setText("submit-button", p.submitButton);
+    BLVD.setText("form-note", p.formNote);
+    BLVD.setText("form-success", p.successMessage);
+
+    document.getElementById("category").insertAdjacentHTML("beforeend", BLVD.optionsHTML(p.categories));
+    document.getElementById("context").insertAdjacentHTML("beforeend", BLVD.optionsHTML(p.contexts));
+  });
+</script>
+</body>
+</html>

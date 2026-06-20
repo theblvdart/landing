@@ -1,0 +1,205 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "assets/uploads"
+public_folder: "/assets/uploads"
+
+site_url: https://example.netlify.app
+display_url: https://example.netlify.app
+
+collections:
+
+  - name: "radar"
+    label: "The Radar"
+    files:
+      - file: "content/radar.json"
+        label: "Radar items"
+        name: "radar"
+        fields:
+          - label: "Items"
+            name: "items"
+            widget: "list"
+            summary: "{{name}} by {{artist}}"
+            fields:
+              - {label: "Slug (no spaces, used in the URL)", name: "slug", widget: "string"}
+              - {label: "Name / object", name: "name", widget: "string"}
+              - {label: "Artist or brand", name: "artist", widget: "string"}
+              - label: "Category"
+                name: "category"
+                widget: "select"
+                options: ["Art", "Collectibles", "Watches", "Fashion", "Design", "Hospitality", "Personal Curation", "Other"]
+              - {label: "Image", name: "image", widget: "image", required: false}
+              - {label: "Excerpt (one line, shown on cards)", name: "excerpt", widget: "text"}
+              - {label: "Cultural significance", name: "significance", widget: "text"}
+              - {label: "Why collectors care", name: "whyCollectorsCare", widget: "text"}
+              - {label: "Current relevance", name: "currentRelevance", widget: "text"}
+              - label: "Acquisition status"
+                name: "status"
+                widget: "select"
+                options: ["Watching", "Available", "Sourced", "Enquire"]
+
+  - name: "journal"
+    label: "Journal"
+    files:
+      - file: "content/journal.json"
+        label: "Journal articles"
+        name: "journal"
+        fields:
+          - label: "Articles"
+            name: "items"
+            widget: "list"
+            summary: "{{title}}"
+            fields:
+              - {label: "Slug (no spaces, used in the URL)", name: "slug", widget: "string"}
+              - {label: "Title", name: "title", widget: "string"}
+              - {label: "Category", name: "category", widget: "string"}
+              - {label: "Date", name: "date", widget: "datetime", format: "YYYY-MM-DD", date_format: "YYYY-MM-DD", time_format: false}
+              - {label: "Image", name: "image", widget: "image", required: false}
+              - {label: "Excerpt", name: "excerpt", widget: "text"}
+              - label: "Full article body"
+                name: "body"
+                widget: "text"
+                hint: "Separate paragraphs with a blank line."
+              - {label: "Featured (shows as the lead story)", name: "featured", widget: "boolean", default: false}
+
+  - name: "pages"
+    label: "Page copy"
+    files:
+
+      - file: "content/pages.json"
+        label: "All page copy"
+        name: "pages"
+        fields:
+
+          - label: "Home"
+            name: "home"
+            widget: "object"
+            collapsed: true
+            fields:
+              - {label: "Hero eyebrow", name: "heroEyebrow", widget: "string"}
+              - label: "Rotating headlines"
+                name: "heroHeadlines"
+                widget: "list"
+                field: {label: "Headline", name: "value", widget: "string"}
+              - {label: "Hero subheading", name: "heroSubheadline", widget: "text"}
+              - {label: "Hero primary button label", name: "heroPrimaryCta", widget: "string"}
+              - {label: "Hero secondary button label", name: "heroSecondaryCta", widget: "string"}
+              - {label: "\"What We Do\" eyebrow", name: "whatWeDoEyebrow", widget: "string"}
+              - label: "\"What We Do\" steps"
+                name: "whatWeDo"
+                widget: "list"
+                summary: "{{title}}"
+                fields:
+                  - {label: "Number (e.g. 01)", name: "number", widget: "string"}
+                  - {label: "Title", name: "title", widget: "string"}
+                  - {label: "Description", name: "description", widget: "text"}
+              - {label: "Radar section eyebrow", name: "radarSectionEyebrow", widget: "string"}
+              - {label: "Radar section heading", name: "radarSectionHeading", widget: "string"}
+              - {label: "Radar section button label", name: "radarSectionCta", widget: "string"}
+              - {label: "Journal section eyebrow", name: "journalSectionEyebrow", widget: "string"}
+              - {label: "Journal section heading", name: "journalSectionHeading", widget: "string"}
+              - {label: "Journal section button label", name: "journalSectionCta", widget: "string"}
+              - {label: "CTA band eyebrow", name: "ctaEyebrow", widget: "string"}
+              - {label: "CTA band heading", name: "ctaHeading", widget: "string"}
+              - {label: "CTA band subheading", name: "ctaSubheading", widget: "text"}
+              - {label: "CTA band button label", name: "ctaButton", widget: "string"}
+
+          - label: "Radar page"
+            name: "radar"
+            widget: "object"
+            collapsed: true
+            fields:
+              - {label: "Eyebrow", name: "eyebrow", widget: "string"}
+              - {label: "Heading", name: "heading", widget: "string"}
+              - {label: "Subheading", name: "subheading", widget: "text"}
+              - {label: "Bottom CTA eyebrow", name: "ctaEyebrow", widget: "string"}
+              - {label: "Bottom CTA heading", name: "ctaHeading", widget: "string"}
+              - {label: "Bottom CTA button label", name: "ctaButton", widget: "string"}
+
+          - label: "Journal page"
+            name: "journal"
+            widget: "object"
+            collapsed: true
+            fields:
+              - {label: "Eyebrow", name: "eyebrow", widget: "string"}
+              - {label: "Heading", name: "heading", widget: "string"}
+              - {label: "Subheading", name: "subheading", widget: "text"}
+              - {label: "\"All Articles\" eyebrow", name: "articlesEyebrow", widget: "string"}
+              - {label: "Bottom CTA eyebrow", name: "ctaEyebrow", widget: "string"}
+              - {label: "Bottom CTA heading", name: "ctaHeading", widget: "string"}
+              - {label: "Bottom CTA button label", name: "ctaButton", widget: "string"}
+
+          - label: "Source page"
+            name: "source"
+            widget: "object"
+            collapsed: true
+            fields:
+              - {label: "Eyebrow", name: "eyebrow", widget: "string"}
+              - {label: "Heading", name: "heading", widget: "string"}
+              - {label: "Subheading", name: "subheading", widget: "text"}
+              - label: "Services"
+                name: "services"
+                widget: "list"
+                summary: "{{tag}}"
+                fields:
+                  - {label: "Tag (e.g. Personal, Corporate)", name: "tag", widget: "string"}
+                  - {label: "Heading", name: "heading", widget: "string"}
+                  - {label: "Description", name: "description", widget: "text"}
+              - {label: "Bottom CTA eyebrow", name: "ctaEyebrow", widget: "string"}
+              - {label: "Bottom CTA heading", name: "ctaHeading", widget: "string"}
+              - {label: "Bottom CTA subheading", name: "ctaSubheading", widget: "text"}
+              - {label: "Bottom CTA button label", name: "ctaButton", widget: "string"}
+
+          - label: "Request a Search page"
+            name: "request"
+            widget: "object"
+            collapsed: true
+            fields:
+              - {label: "Eyebrow", name: "eyebrow", widget: "string"}
+              - {label: "Heading", name: "heading", widget: "string"}
+              - {label: "Subheading", name: "subheading", widget: "text"}
+              - label: "Category dropdown options"
+                name: "categories"
+                widget: "list"
+                field: {label: "Category", name: "value", widget: "string"}
+              - label: "\"Sourcing for\" dropdown options"
+                name: "contexts"
+                widget: "list"
+                field: {label: "Option", name: "value", widget: "string"}
+              - {label: "Submit button label", name: "submitButton", widget: "string"}
+              - {label: "Note under the submit button", name: "formNote", widget: "string"}
+              - {label: "Success message after submitting", name: "successMessage", widget: "text"}
+
+  - name: "settings"
+    label: "Site settings"
+    files:
+      - file: "content/site.json"
+        label: "Site settings"
+        name: "site"
+        fields:
+          - {label: "Site name", name: "name", widget: "string"}
+          - {label: "Tagline", name: "tagline", widget: "string"}
+          - {label: "Contact email", name: "email", widget: "string"}
+          - {label: "Instagram URL", name: "instagram", widget: "string"}
+          - label: "Featured on homepage"
+            name: "featuredHome"
+            widget: "list"
+            hint: "Paste in the exact slug of up to 3 Radar items to feature on the homepage."
+            field: {label: "Radar item slug", name: "slug", widget: "string"}
+          - label: "Navigation labels"
+            name: "nav"
+            widget: "object"
+            fields:
+              - {label: "\"The Radar\" link text", name: "radar", widget: "string"}
+              - {label: "\"Journal\" link text", name: "journal", widget: "string"}
+              - {label: "\"Source\" link text", name: "source", widget: "string"}
+              - {label: "\"Request a Search\" link text", name: "request", widget: "string"}
+          - label: "Footer link labels"
+            name: "footer"
+            widget: "object"
+            fields:
+              - {label: "Instagram link text", name: "instagram", widget: "string"}
+              - {label: "Email link text", name: "email", widget: "string"}
+              - {label: "Contact link text", name: "contact", widget: "string"}
+              - {label: "Newsletter link text", name: "newsletter", widget: "string"}
