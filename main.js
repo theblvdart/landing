@@ -193,37 +193,30 @@
     const success = document.getElementById("form-success");
     const submitBtn = form.querySelector("button[type=submit]");
 
-    form.addEventListener("submit", async (e) => {
+    form.addEventListener("submit", (e) => {
       e.preventDefault();
-      const originalHTML = submitBtn.innerHTML;
-      submitBtn.innerHTML = "Sending\u2026";
-      submitBtn.disabled = true;
+      const fd = new FormData(form);
+      const name = fd.get("name") || "";
+      const email = fd.get("email") || "";
+      const category = fd.get("category") || "";
+      const context = fd.get("context") || "";
+      const budget = fd.get("budget") || "";
+      const description = fd.get("description") || "";
 
-      try {
-        const res = await fetch("https://api.web3forms.com/submit", {
-          method: "POST",
-          headers: { "Accept": "application/json" },
-          body: (() => {
-            const fd = new FormData(form);
-            fd.append("access_key", "ea8c324b-53c8-4459-a0ef-6f1e815e44d8");
-            fd.append("subject", "New sourcing request via THE BLVD");
-            return fd;
-          })()
-        });
-        if(res.ok){
-          form.reset();
-          if(success) success.classList.add("show");
-        } else {
-          submitBtn.innerHTML = "Something went wrong. Please try again.";
-          submitBtn.disabled = false;
-        }
-      } catch(err){
-        submitBtn.innerHTML = "Something went wrong. Please try again.";
-        submitBtn.disabled = false;
-        setTimeout(() => {
-          submitBtn.innerHTML = originalHTML;
-        }, 4000);
-      }
+      const subject = encodeURIComponent("Sourcing request from " + name);
+      const body = encodeURIComponent(
+        "Name: " + name + "\n" +
+        "Email: " + email + "\n" +
+        "Category: " + category + "\n" +
+        "Sourcing for: " + context + "\n" +
+        "Budget: " + budget + "\n\n" +
+        "Description:\n" + description
+      );
+
+      window.location.href = "mailto:enquiries@theblvd.art?subject=" + subject + "&body=" + body;
+
+      form.reset();
+      if(success) success.classList.add("show");
     });
   }
 
