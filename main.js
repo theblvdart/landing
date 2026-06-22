@@ -190,13 +190,40 @@
   function initSourceForm(){
     const form = document.getElementById("source-form");
     if(!form) return;
-    const success = document.querySelector(".form-success");
-    form.addEventListener("submit", (e) => {
+    const success = document.getElementById("form-success");
+    const submitBtn = form.querySelector("button[type=submit]");
+
+    form.addEventListener("submit", async (e) => {
       e.preventDefault();
-      // No backend wired up yet \u2014 see README for connecting this to
-      // Formspree / a serverless function / your email provider of choice.
-      form.reset();
-      if(success) success.classList.add("show");
+      const originalHTML = submitBtn.innerHTML;
+      submitBtn.innerHTML = "Sending\u2026";
+      submitBtn.disabled = true;
+
+      try {
+        const res = await fetch("https://api.web3forms.com/submit", {
+          method: "POST",
+          headers: { "Accept": "application/json" },
+          body: (() => {
+            const fd = new FormData(form);
+            fd.append("access_key", "ea8c324b-53c8-4459-a0ef-6f1e815e44d8");
+            fd.append("subject", "New sourcing request via THE BLVD");
+            return fd;
+          })()
+        });
+        if(res.ok){
+          form.reset();
+          if(success) success.classList.add("show");
+        } else {
+          submitBtn.innerHTML = "Something went wrong. Please try again.";
+          submitBtn.disabled = false;
+        }
+      } catch(err){
+        submitBtn.innerHTML = "Something went wrong. Please try again.";
+        submitBtn.disabled = false;
+        setTimeout(() => {
+          submitBtn.innerHTML = originalHTML;
+        }, 4000);
+      }
     });
   }
 

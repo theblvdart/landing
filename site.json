@@ -1,0 +1,23 @@
+{
+  "name": "THE BLVD",
+  "tagline": "Culture worth collecting.",
+  "email": "info@theblvd.art",
+  "instagram": "https://www.instagram.com/theblvd.art/",
+  "featuredHome": [
+    "kaws-companion",
+    "off-white-the-ten",
+    "invader"
+  ],
+  "nav": {
+    "radar": "The Radar",
+    "journal": "Journal",
+    "source": "Source",
+    "request": "Request a search"
+  },
+  "footer": {
+    "instagram": "Instagram",
+    "email": "Email",
+    "contact": "Contact",
+    "newsletter": "Newsletter"
+  }
+}
