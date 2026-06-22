@@ -1,0 +1,121 @@
+{
+  "home": {
+    "heroEyebrow": "Contemporary Art, Collectibles, Fashion, Design",
+    "heroHeadlines": [
+      "Culture Worth Collecting.",
+      "Beyond Hype.",
+      "Discover What’s Next.",
+      "Collect Better.",
+      "Where Culture Meets Collecting."
+    ],
+    "heroSubheadline": "THE BLVD explores contemporary art, collectibles, fashion and cultural objects through insight, context and acquisition opportunities.",
+    "heroPrimaryCta": "Explore The Radar",
+    "heroSecondaryCta": "Request A Search",
+    "whatWeDoEyebrow": "What We Do",
+    "whatWeDo": [
+      {
+        "number": "01",
+        "title": "Discover",
+        "description": "Find emerging artists, overlooked opportunities and exceptional objects before the wider market catches on."
+      },
+      {
+        "number": "02",
+        "title": "Understand",
+        "description": "Gain context through provenance, market intelligence and cultural significance, not just price."
+      },
+      {
+        "number": "03",
+        "title": "Acquire",
+        "description": "Access sourcing and acquisition support across art, collectibles, fashion and luxury."
+      }
+    ],
+    "radarSectionEyebrow": "Featured Radar",
+    "radarSectionHeading": "On our radar right now.",
+    "radarSectionCta": "View all entries",
+    "journalSectionEyebrow": "Latest Journal",
+    "journalSectionHeading": "Reading on culture and collecting.",
+    "journalSectionCta": "Visit the Journal",
+    "ctaEyebrow": "Private Search",
+    "ctaHeading": "Looking for something specific?",
+    "ctaSubheading": "Tell us what you're after (a piece, an edition, an opportunity) and we'll see what's possible.",
+    "ctaButton": "Request a Search"
+  },
+  "radar": {
+    "eyebrow": "The Radar",
+    "heading": "Worth Paying Attention To.",
+    "subheading": "A running catalogue of artists, objects and opportunities we're watching: discovery, context and collectibility, not a shop window.",
+    "ctaEyebrow": "Don't See It Here?",
+    "ctaHeading": "We track more than the radar shows.",
+    "ctaButton": "Request a Search"
+  },
+  "journal": {
+    "eyebrow": "Journal",
+    "heading": "Cultural Intelligence.",
+    "subheading": "Analysis, perspective and primers on the people, objects and ideas shaping contemporary collecting.",
+    "articlesEyebrow": "All Articles",
+    "ctaEyebrow": "Looking For Something Specific?",
+    "ctaHeading": "We can help you find it.",
+    "ctaButton": "Request a Search"
+  },
+  "source": {
+    "eyebrow": "Source",
+    "heading": "Sourcing, Curation & Advisory.",
+    "subheading": "We work across personal collecting, corporate environments, interiors and hospitality, finding the right object for the right context, then handling everything it takes to acquire it.",
+    "services": [
+      {
+        "tag": "Personal",
+        "heading": "Building a collection that's actually yours.",
+        "description": "From a first considered purchase to a lifetime project, we work directly with individual collectors, surfacing pieces, opening doors that usually stay closed, and reading provenance so you don't have to guess at it."
+      },
+      {
+        "tag": "Corporate",
+        "heading": "Art and objects for the spaces people work in.",
+        "description": "Sourcing for offices, headquarters, corporate collections and client gifting, where the brief is brand and budget as much as taste, and procurement needs to move at business speed."
+      },
+      {
+        "tag": "Interiors",
+        "heading": "Pieces chosen for a room, not just a wall.",
+        "description": "We partner with interior designers and homeowners to source work that earns its place in a finished space: right for scale, light and everything else already in the room, not just striking on its own."
+      },
+      {
+        "tag": "Hospitality",
+        "heading": "Objects that set the tone of a place.",
+        "description": "For hotels, restaurants and hospitality venues, art and design objects are part of the guest experience, sourced into the project from the start, not added as decoration once everything else is finished."
+      },
+      {
+        "tag": "Advisory",
+        "heading": "Ongoing guidance, not a one-off purchase.",
+        "description": "Longer-term support on provenance, valuation context, collection strategy and timing, for collectors, families and institutions building toward something bigger than a single acquisition."
+      }
+    ],
+    "ctaEyebrow": "Start A Conversation",
+    "ctaHeading": "Tell us what you're working on.",
+    "ctaSubheading": "Whatever the context, personal, corporate, a single room or a whole project, the first step is the same conversation.",
+    "ctaButton": "Request a Search"
+  },
+  "request": {
+    "eyebrow": "Request a Search",
+    "heading": "Looking For Something Specific?",
+    "subheading": "Tell us what you're looking for and we'll see what's possible. No concierge script, no sales pressure, just a direct line to someone with taste and access.",
+    "categories": [
+      "Art",
+      "Collectibles",
+      "Watches",
+      "Fashion",
+      "Design",
+      "Other"
+    ],
+    "contexts": [
+      "Myself",
+      "A business or office",
+      "An interior project",
+      "A hospitality venue",
+      "Other"
+    ],
+    "submitButton": "Submit Request",
+    "formNote": "We reply personally to every request, usually within a few days.",
+    "successMessage": "Request received. We'll be in touch at the email address you provided.",
+    "categoryLabel": "What are you looking for?",
+    "contextLabel": "Who is it for?"
+  }
+}

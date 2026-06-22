@@ -57,24 +57,28 @@
           <input id="name" name="name" type="text" placeholder="Your full name" required>
         </div>
         <div>
-          <label for="email">Email</label>
-          <input id="email" name="email" type="email" placeholder="you@email.com" required>
+          <label for="phone">Contact number</label>
+          <input id="phone" name="phone" type="tel" placeholder="+44 7700 000000">
         </div>
       </div>
 
-      <div class="form-row two">
-        <div>
-          <label for="category">Category</label>
-          <select id="category" name="category" required>
-            <option value="" disabled selected>Select a category</option>
-          </select>
-        </div>
-        <div>
-          <label for="context">Sourcing for</label>
-          <select id="context" name="context" required>
-            <option value="" disabled selected>Select an option</option>
-          </select>
-        </div>
+      <div class="form-row">
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" placeholder="you@email.com" required>
+      </div>
+
+      <div class="form-row">
+        <label for="category">What are you looking for?</label>
+        <select id="category" name="category" required>
+          <option value="" disabled selected>Select a category</option>
+        </select>
+      </div>
+
+      <div class="form-row">
+        <label for="context">Who is it for?</label>
+        <select id="context" name="context" required>
+          <option value="" disabled selected>Select an option</option>
+        </select>
       </div>
 
       <div class="form-row">
