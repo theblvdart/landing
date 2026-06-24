@@ -83,18 +83,6 @@
       "image": "/assets/uploads/the-ten.webp",
       "category": "Fashion",
       "whyCollectorsCare": "As one of the defining releases of the last decade of streetwear, original pairs and deadstock examples sit at the intersection of fashion collecting and cultural object, with documentation and condition mattering enormously to value."
-    },
-    {
-      "currentRelevance": "very",
-      "excerpt": "testing testing",
-      "significance": "some latin or something",
-      "artist": "TEST",
-      "name": "TEST",
-      "slug": "TEST",
-      "status": "Available",
-      "image": "/assets/uploads/saville.jpg",
-      "category": "Art",
-      "whyCollectorsCare": "They do"
     }
   ]
 }
