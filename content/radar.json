@@ -8,7 +8,7 @@
       "name": "The Spontaneous Image",
       "slug": "joachim-lambrechts-radar",
       "status": "Watching",
-      "image": "",
+      "image": "/assets/uploads/joachim-lambrechts.jpg",
       "category": "Art",
       "whyCollectorsCare": "Lambrechts offers a recognisable visual identity without relying on a single recurring character or formula. His progression from street art into gallery exhibitions, alongside representation by Kristin Hjellegjerde Gallery, provides an established exhibition history. His inclusion in collections such as Colección SOLO and the Bunker Artspace adds institutional and private-collection context."
     },
@@ -20,7 +20,7 @@
       "name": "Colour in Formation",
       "slug": "paul-kremer-radar",
       "status": "Available",
-      "image": "",
+      "image": "/assets/uploads/paul-kremer.jpg",
       "category": "Art",
       "whyCollectorsCare": "Kremer's practice offers two distinct but connected bodies of work: considered abstract paintings and digitally informed image-making. His paintings have been exhibited internationally, including with Berggruen Gallery and Library Street Collective, and his work is held in collections including the Birmingham Museum of Art. His auction history offers some secondary-market reference, although individual works and periods should be assessed carefully."
     },
@@ -32,7 +32,7 @@
       "name": "The Recycled Image",
       "slug": "yves-decamps-radar",
       "status": "Enquire",
-      "image": "",
+      "image": "/assets/uploads/yves-decamps.jpg",
       "category": "Art",
       "whyCollectorsCare": "Decamps offers a distinctive approach to figurative painting at a time when the relationship between digital imagery and traditional artistic processes continues to evolve. His work is particularly interesting for collectors drawn to artists who interrogate contemporary image-making rather than simply reproduce it. His relatively limited public market visibility also means that provenance, gallery relationships and the development of his exhibition history deserve close attention."
     },
@@ -44,7 +44,7 @@
       "name": "The New Pop Disruptor",
       "slug": "olaolu-slawn-radar",
       "status": "Enquire",
-      "image": "",
+      "image": "/assets/uploads/slawn.jpg",
       "category": "Art",
       "whyCollectorsCare": "Slawn's appeal extends beyond painting into fashion, music, celebrity and wider youth culture. His rapid rise has attracted substantial attention from collectors, although that visibility should not be confused with established long-term market stability. His output, edition structures and provenance need to be considered carefully, particularly given the volume of accessible merchandise and collaborations associated with his name."
     },
@@ -56,7 +56,7 @@
       "name": "Rhythm of the City",
       "slug": "yoon-hyup-radar",
       "status": "Available",
-      "image": "",
+      "image": "/assets/uploads/joon-hyup.jpg",
       "category": "Art",
       "whyCollectorsCare": "Hyup has developed an international exhibition history spanning New York, Seoul, Tokyo, Hong Kong and London. His work is represented in collections including the Lotte Museum of Art and OAR Contemporary Art Museum, alongside corporate collections such as Dior and Tiffany & Co. His recognisable visual language offers collectors a coherent body of work with crossover appeal beyond the traditional contemporary art audience."
     },
@@ -68,7 +68,7 @@
       "name": "Abstract Immersion",
       "slug": "lucy-bull-radar",
       "status": "Watching",
-      "image": "",
+      "image": "/assets/uploads/lucy-bull.jpg",
       "category": "Art",
       "whyCollectorsCare": "Bull has moved beyond emerging-artist status into an increasingly established institutional and gallery context. Her work is represented by David Kordansky Gallery and appears in significant collections including LACMA, the Hirshhorn Museum, the Baltimore Museum of Art and the Albertina in Vienna. This institutional presence provides a stronger foundation for collecting than market attention alone. Her auction activity, however, still warrants careful consideration of individual works, scale and provenance."
     },
@@ -80,7 +80,7 @@
       "name": "The American Unravelling",
       "slug": "jordan-sullivan-radar",
       "status": "Enquire",
-      "image": "",
+      "image": "/assets/uploads/jordan-sullivan.jpg",
       "category": "Art",
       "whyCollectorsCare": "Sullivan's multidisciplinary practice gives his work a depth that extends beyond painting alone. His involvement in artist books, independent publishing and album artwork adds another dimension to his cultural position. His works have entered collections including HBC Global Art Collection and Memorial Sloan Kettering, although his secondary-market footprint remains comparatively limited. For collectors, this is a practice to understand through the work itself and its developing exhibition history rather than auction speculation."
     },
@@ -92,6 +92,7 @@
       "name": "Beautifully Uncomfortable",
       "slug": "joakim-ojanen-radar",
       "status": "Enquire",
+      "image": "/assets/uploads/joakim-ojanen.jpg",
       "category": "Art",
       "whyCollectorsCare": "Ojanen's ability to translate a consistent visual language across different media makes his practice particularly interesting. His works are held in collections including Magasin III in Stockholm, Colección SOLO in Madrid and the Bunker Artspace in Florida. His sculpture has achieved a measurable auction history, with a reported auction record of US$25,000, although prices vary considerably by medium, scale and edition."
     }
